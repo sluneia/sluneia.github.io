@@ -1,94 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research & Publications</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      /* background-color: #978cf7; /* pastel indigo */
-      /* background-color: #b5aafc; /*light lavander */
-      /* background-color: #c7bdfc; /* pastel lilac */
-      background-color: #a3a8f9; /* soft pastl indigo */
-      /* background-color: #cc0000;  same red as homepage */
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.2);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    header a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: left; /* align everything to the left */
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-align: center; /* keep main title centered */
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-top: 2rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    a {
-      color: #fffacd; /* softer yellow for links */
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.2);
-      text-align: center;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Research & Publications — Stefano Luneia</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="subpage">
   <header>
+    <!-- header uses global styles from style.css -->
     <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
+    <a href="research.html" aria-current="page">Research</a>
     <a href="talks.html">Talks</a>
+    <a href="cv.html">CV</a>
     <a href="contact.html">Contact</a>
   </header>
 
@@ -97,25 +21,32 @@
 
     <section>
       <h2>Research Interests</h2>
-      <p>My main research interests lie in higher category theory and higher topos theory. I am also deeply fascinated by formal category theory and I enjoy everything I can put category theory in.</p>
+      <p>
+        My main research interests lie in higher category theory and higher topos theory.
+        I am also deeply fascinated by formal category theory — I am excited by every
+        opportunity to push categorical methods into new territory.
+      </p>
     </section>
 
     <section>
       <h2>Publications</h2>
       <ul>
         <li>
-          <a href="https://arxiv.org/abs/2303.03865v2" target="_blank">Bicategories of automata, automata in bicategories</a>, Electronic Proceedings in Theoretical Computer Science, 2023<br>
-          <strong>Joint with:</strong> 
-          <a href="https://coauthor1-website.com" target="_blank">Guido Boccali</a>, 
-          <a href="https://iwilare.com/" target="_blank">Andrea Laretto</a>, 
-          <a href="https://tetrapharmakon.github.io/" target="_blank">Fosco Loregian</a>
+          <a href="https://arxiv.org/abs/2303.03865v2" target="_blank" rel="noopener">Bicategories of automata, automata in bicategories</a>,
+          Electronic Proceedings in Theoretical Computer Science, 2023.<br>
+          <strong>Joint with:</strong>
+          <a href="https://coauthor1-website.com" target="_blank" rel="noopener">Guido Boccali</a>,
+          <a href="https://iwilare.com/" target="_blank" rel="noopener">Andrea Laretto</a>,
+          <a href="https://tetrapharmakon.github.io/" target="_blank" rel="noopener">Fosco Loregian</a>
         </li>
+
         <li>
-          <a href="https://arxiv.org/abs/2303.03867" target="_blank">Completeness for Categories of Generalized Automata</a>, Leibniz International Proceedings in Informatics (LIPIcs), 2023<br>
-          <strong>Joint with:</strong> 
-          <a href="https://coauthor1-website.com" target="_blank">Guido Boccali</a>, 
-          <a href="https://iwilare.com/" target="_blank">Andrea Laretto</a>, 
-          <a href="https://tetrapharmakon.github.io/" target="_blank">Fosco Loregian</a>
+          <a href="https://arxiv.org/abs/2303.03867" target="_blank" rel="noopener">Completeness for Categories of Generalized Automata</a>,
+          Leibniz International Proceedings in Informatics (LIPIcs), 2023.<br>
+          <strong>Joint with:</strong>
+          <a href="https://coauthor1-website.com" target="_blank" rel="noopener">Guido Boccali</a>,
+          <a href="https://iwilare.com/" target="_blank" rel="noopener">Andrea Laretto</a>,
+          <a href="https://tetrapharmakon.github.io/" target="_blank" rel="noopener">Fosco Loregian</a>
         </li>
       </ul>
     </section>
@@ -124,11 +55,11 @@
       <h2>Preprints</h2>
       <ul>
         <li>
-          <a href="https://arxiv.org/abs/2305.00272" target="_blank">The semibicategory of moore automata</a>, 2023<br>
-          <strong>Joint with:</strong> 
-          <a href="https://coauthor1-website.com" target="_blank">Guido Boccali</a>, 
-          <a href="https://iwilare.com/" target="_blank">Andrea Laretto</a>, 
-          <a href="https://tetrapharmakon.github.io/" target="_blank">Fosco Loregian</a>
+          <a href="https://arxiv.org/abs/2305.00272" target="_blank" rel="noopener">The semibicategory of moore automata</a>, 2023.<br>
+          <strong>Joint with:</strong>
+          <a href="https://coauthor1-website.com" target="_blank" rel="noopener">Guido Boccali</a>,
+          <a href="https://iwilare.com/" target="_blank" rel="noopener">Andrea Laretto</a>,
+          <a href="https://tetrapharmakon.github.io/" target="_blank" rel="noopener">Fosco Loregian</a>
         </li>
       </ul>
     </section>
