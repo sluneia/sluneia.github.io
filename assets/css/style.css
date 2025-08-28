@@ -18,7 +18,33 @@ body, html {
     background-color: #a3a8f9; /* pastel indigo */
     color: #1e1e2f;            /* dark indigo for body text */
 }
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* stack vertically */
+    gap: 20px;              /* smaller spacing */
+    padding: 20px;
+    height: auto;           /* allow scroll instead of fixed viewport */
+    text-align: center;
+  }
 
+  .home-left img.profile {
+    max-width: 180px; /* smaller profile image */
+  }
+
+  .home-right h1 {
+    font-size: 2rem; /* smaller heading */
+  }
+
+  .home-right p {
+    font-size: 1.2rem; /* smaller subtext */
+  }
+
+  header nav a {
+    font-size: 1rem; /* scale down nav links */
+    margin: 0 10px;
+  }
+}
 .home-left, .home-right {
     flex: 0 1 400px;
     display: flex;
