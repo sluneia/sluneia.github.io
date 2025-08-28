@@ -211,12 +211,11 @@ footer {
   flex-shrink: 0;
 }
 
-/* MOBILE LAYOUT */
 @media (max-width: 768px) {
-  /* stack homepage vertically and reverse order */
+  /* stack homepage blocks vertically and reverse order */
   main.home-container {
     flex-direction: column-reverse; /* right block on top, left block below */
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
     min-height: auto;
     align-items: center;
@@ -235,9 +234,17 @@ footer {
     font-size: 1.2rem;
   }
 
+  /* make homepage nav links vertical and slightly bigger */
+  .home-right nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* spacing between links */
+    align-items: center;
+  }
+
   .home-right nav a {
-    margin: 0 15px; /* smaller spacing on mobile */
-    font-size: 1rem;
+    font-size: 1.2rem; /* slightly bigger */
+    margin: 0;          /* reset horizontal margin */
   }
 
   header a {
