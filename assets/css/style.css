@@ -7,20 +7,24 @@ body, html {
 
 .home-container {
     display: flex;
-    height: 100vh; /* full viewport height */
-    /* background-color: #ef5350;  light red */
-    /* background-color: #c62828;  firebrick */
-    background-color: #b71c1c; /* dark red */ 
-    color: white;
-    justify-content: center; /* horizontal centering of left/right blocks */
-    align-items: center;     /* vertical centering */
-    gap: 50px;               /* space between left and right */
+    justify-content: center;   /* horizontal centering of the whole block */
+    align-items: center;       /* vertical centering */
+    min-height: 90vh;          /* fill most of the viewport */
+    max-width: 1200px;         /* keep content narrower */
+    margin: 0 auto;            /* center the whole block */
+    gap: 3rem;                 /* space between left and right */
     padding: 20px;
     box-sizing: border-box;
+
+    /* background-color: #ef5350;  light red */
+    /* background-color: #c62828;  firebrick */
+    background-color: #b71c1c;   /* dark red */
+    color: white;
 }
 
 .home-left, .home-right {
     flex: 1;
+    max-width: 500px;          /* prevent columns from getting too wide */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,8 +45,6 @@ body, html {
 .home-left img.profile:hover {
     transform: scale(1.05);        /* slight zoom on hover */
 }
-
-
 
 .home-right h1 {
     font-size: 3rem; /* maintain difference in font sizes */
