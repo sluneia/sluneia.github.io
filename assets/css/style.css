@@ -67,6 +67,19 @@ body, html {
     color: #ffab91; /* peach hover effect */
 }
 
+/* General link style */
+a {
+    color: #ffab91;           /* peach color like nav hover */
+    text-decoration: none;    /* remove underline */
+    font-weight: bold;
+}
+
+/* Hover effect */
+a:hover {
+    color: #ffd5c2;           /* lighter peach on hover */
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     padding: 10px;
