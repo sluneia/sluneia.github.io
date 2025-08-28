@@ -121,6 +121,54 @@ main:not(.home-container) li {
     color: #1e1e2f;
 }
 
+/* ===== Subpages (Talks, Research, CV, etc.) ===== */
+.subpage {
+  background-color: #a3a8f9; /* same pastel indigo as homepage */
+  color: #1e1e2f;            /* readable dark text */
+  min-height: 100vh;
+}
+
+/* Container: centered column, left-aligned content */
+.subpage main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Center only the main page title */
+.subpage main h1 {
+  text-align: center;
+  color: #2c2c54; /* headings color */
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+/* All sections flush-left with no extra indent */
+.subpage main section {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+/* Headings + lists flush-left */
+.subpage main h2 {
+  color: #2c2c54;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subpage main ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.subpage main li {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: #1e1e2f;
+}
+
 /* ===== Footer ===== */
 footer {
     text-align: center;
