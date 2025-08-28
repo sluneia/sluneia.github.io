@@ -1,32 +1,63 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    background: #333;
+.home-container {
+    display: flex;
+    height: 100vh; /* full viewport height */
+    background-color: #b71c1c; /* dark red */
     color: white;
+    justify-content: center; /* horizontal centering of left/right blocks */
+    align-items: center;     /* vertical centering */
+    gap: 50px;               /* space between left and right */
     padding: 20px;
+    box-sizing: border-box;
+}
+
+.home-left, .home-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-header nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+.home-left img.profile {
+    max-width: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.profile {
-    max-width: 200px;
-    border-radius: 50%;
+.home-right h1 {
+    font-size: 3rem; /* maintain difference in font sizes */
+    margin-bottom: 10px;
 }
-main {
-    padding: 20px;
+
+.home-right p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
+
+.home-right nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.home-right nav a:hover {
+    color: #ffccbc; /* subtle hover effect */
+}
+
 footer {
     text-align: center;
     padding: 10px;
-    background: #eee;
+    background: #333;
+    color: white;
+    font-size: 0.9rem;
 }
