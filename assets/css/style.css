@@ -1,226 +1,240 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* ===== Homepage Layout ===== */
-.home-container {
-    display: flex;
-    justify-content: center;   /* center horizontally */
-    align-items: center;       /* center vertically */
-    height: 100vh;             /* full viewport height */
-    gap: 80px;                 /* distance between left and right */
-    padding: 40px;
-    box-sizing: border-box;
-
-    background-color: #a3a8f9; /* pastel indigo */
-    color: #1e1e2f;            /* dark indigo for body text */
-}
-/* MOBILE LAYOUT */
-@media (max-width: 768px) {
-  .home-container {
-    flex-direction: column; /* stack vertically */
-    gap: 20px;              /* smaller spacing */
-    padding: 20px;
-    height: auto;           /* allow scroll instead of fixed viewport */
-    text-align: center;
-  }
-
-  .home-left img.profile {
-    max-width: 180px; /* smaller profile image */
-  }
-
-  .home-right h1 {
-    font-size: 2rem; /* smaller heading */
-  }
-
-  .home-right p {
-    font-size: 1.2rem; /* smaller subtext */
-  }
-
-  header nav a {
-    font-size: 1rem; /* scale down nav links */
-    margin: 0 10px;
-  }
-}
-.home-left, .home-right {
-    flex: 0 1 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+/* make layout a column so footer lives after content */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #1e1e2f; /* body text color */
+  background: white; /* default — pages override */
+  box-sizing: border-box;
 }
 
+/* ===========================
+   Header / Navigation (global)
+   =========================== */
+header {
+  background: rgba(0,0,0,0.18);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 10;
+}
+
+/* nav links — global */
+header a,
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+header a:hover,
+header nav a:hover {
+  color: #ffd166;   /* pastel yellow hover */
+  text-decoration: none;
+}
+
+/* ===========================
+   Homepage layout (main.home-container)
+   =========================== */
+/* use .home-container on <main> for the homepage */
+main.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  gap: 80px;
+  padding: 40px;
+  box-sizing: border-box;
+
+  background-color: #a3a8f9; /* pastel indigo */
+  color: #1e1e2f;
+  min-height: 100vh; /* push footer below the fold */
+}
+
+/* homepage left/right blocks */
+.home-left,
+.home-right {
+  flex: 0 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* profile picture styles (homepage) */
 .home-left img.profile {
-    max-width: 250px;
-    border-radius: 20px;   /* smooth rounded corners */
-    margin-bottom: 20px;
-    object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+  max-width: 250px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease;
 }
-
-/* Hover effect for homepage profile image */
 .home-left img.profile:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .home-right h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #2c2c54; /* deeper indigo for headings */
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #2c2c54;
 }
 
 .home-right p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #1e1e2f; /* readable text */
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #1e1e2f;
 }
 
-/* ===== Unified Navigation (all pages) ===== */
-header nav a,
-header a,
+/* If you keep a navigation inside the home-right block */
 .home-right nav a {
-    display: inline-block;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #ffffff;       /* white nav links */
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+  color: #ffffff;
 }
 
-header nav a:hover,
-header a:hover,
-.home-right nav a:hover {
-    color: #ffd166;       /* pastel yellow hover */
-    text-decoration: none;
+/* ===========================
+   Subpages (research, talks, about, cv, ...) 
+   - apply to pages that set <body class="subpage">
+   - these pages get the same background, left aligned content,
+     and a centered main title.
+   =========================== */
+body.subpage {
+  background-color: #a3a8f9; /* pastel indigo */
+  color: #1e1e2f;
 }
 
-/* ===== General content links (non-nav) ===== */
-main a {
-    color: #3b3bb3;       /* medium indigo-blue links */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main a:hover {
-    color: #ffd166;       /* pastel pink hover */
-    text-decoration: none;
-}
-
-/* ===== Section Layout (Research, Talks, etc.) ===== */
-main:not(.home-container) {
-    flex: 1;
-    padding: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-main:not(.home-container) h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #2c2c54; /* keep consistency */
-}
-
-main:not(.home-container) h2 {
-    font-size: 2rem;
-    margin-top: 2rem;
-    color: #2c2c54;
-}
-
-main:not(.home-container) ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-}
-
-main:not(.home-container) li {
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #1e1e2f;
-}
-
-/* ===== Subpages (Talks, Research, CV, etc.) ===== */
-.subpage {
-  background-color: #a3a8f9; /* same pastel indigo as homepage */
-  color: #1e1e2f;            /* readable dark text */
-  min-height: 100vh;
-}
-
-/* Container: centered column, left-aligned content */
-.subpage main {
+/* main content column for subpages */
+body.subpage main {
+  flex: 1 0 auto;
+  min-height: 100vh;       /* keep footer below the fold initially */
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: left;
+  box-sizing: border-box;
+  text-align: left;        /* main content flush-left */
 }
 
-/* Center only the main page title */
-.subpage main h1 {
+/* Center ONLY the big page title on subpages */
+body.subpage main h1 {
   text-align: center;
-  color: #2c2c54; /* headings color */
+  color: #2c2c54;
   margin-bottom: 1rem;
   font-size: 3rem;
 }
 
-/* All sections flush-left with no extra indent */
-.subpage main section {
-  margin: 0 0 1.5rem 0;
-  padding: 0;
-}
-
-/* Headings + lists flush-left */
-.subpage main h2 {
-  color: #2c2c54;
+/* section headings and lists flush-left */
+body.subpage main h2 {
+  font-size: 2rem;
   margin-top: 2rem;
+  color: #2c2c54;
   margin-bottom: 0.5rem;
 }
 
-.subpage main ul {
+body.subpage main ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
 
-.subpage main li {
+body.subpage main li {
   margin: 0.75rem 0;
   line-height: 1.6;
   color: #1e1e2f;
 }
-.subpage header {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+
+/* inline links inside main for subpages */
+body.subpage main a,
+main a {
+  color: #3b3bb3;     /* indigo-blue */
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.subpage header a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+body.subpage main a:hover,
+main a:hover {
+  color: #ff7eb9;     /* pastel pink hover */
+  text-decoration: none;
 }
 
-.subpage header a:hover {
-    color: #ffd166; 
-    text-decoration: none;
-}
-
-/* ===== Footer ===== */
+/* ===========================
+   Footer (global)
+   =========================== */
 footer {
+  text-align: center;
+  padding: 10px;
+  background: #2c2c54;  /* deep indigo footer (unified) */
+  color: #ffffff;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Responsive tweaks
+   =========================== */
+@media (max-width: 768px) {
+  /* stack homepage vertically on small screens */
+  main.home-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    min-height: auto;
+    align-items: center;
     text-align: center;
-    padding: 10px;
-    background: #2c2c54;  /* deep indigo footer */
-    color: #ffffff;
-    font-size: 0.9rem;
+  }
+
+  .home-left img.profile {
+    max-width: 180px;
+  }
+
+  .home-right h1 {
+    font-size: 2rem;
+  }
+
+  .home-right p {
+    font-size: 1.2rem;
+  }
+
+  header a {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+
+  body.subpage main {
+    padding: 1.25rem;
+    min-height: auto;
+  }
+}
+
+/* smaller phones */
+@media (max-width: 420px) {
+  header {
+    padding: 0.75rem 1rem;
+    gap: 12px;
+  }
+
+  header a {
+    font-size: 0.95rem;
+  }
+
+  .home-right h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-right p {
+    font-size: 1rem;
+  }
 }
