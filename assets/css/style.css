@@ -108,9 +108,6 @@ main.home-container {
 
 /* ===========================
    Subpages (research, talks, about, cv, ...) 
-   - apply to pages that set <body class="subpage">
-   - these pages get the same background, left aligned content,
-     and a centered main title.
    =========================== */
 body.subpage {
   background-color: #a3a8f9; /* pastel indigo */
@@ -166,7 +163,7 @@ main a {
 
 body.subpage main a:hover,
 main a:hover {
-  color: #ff7eb9;     /* pastel pink hover */
+  color: #ffd166;   /* pastel yellow hover */
   text-decoration: none;
 }
 
