@@ -5,7 +5,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Full-page background for homepage */
+/* ===== Homepage Layout ===== */
 .home-container {
     display: flex;
     justify-content: center;   /* center horizontally */
@@ -39,7 +39,7 @@ body, html {
     transition: transform 0.3s ease;
 }
 
-/* Hover effect */
+/* Hover effect for homepage profile image */
 .home-left img.profile:hover {
     transform: scale(1.05);
 }
@@ -54,7 +54,7 @@ body, html {
     margin-bottom: 20px;
 }
 
-/* ===== Unified Navigation (works for all pages) ===== */
+/* ===== Unified Navigation (all pages) ===== */
 header nav a,
 header a,
 .home-right nav a {
@@ -71,22 +71,23 @@ header nav a:hover,
 header a:hover,
 .home-right nav a:hover {
     color: #ffab91; /* peach hover effect */
+    text-decoration: none; /* prevent underline on hover */
 }
 
-/* ===== General link style (content links, not nav) ===== */
+/* ===== General content links (non-nav) ===== */
 main a {
-    color: #ffab91;           /* peach color like nav hover */
-    text-decoration: none;    
+    color: #ffab91;           /* peach color */
+    text-decoration: none;    /* remove underline */
     font-weight: bold;
 }
 
 main a:hover {
     color: #ffd5c2;           /* lighter peach on hover */
-    text-decoration: underline;
+    text-decoration: none;     /* no underline on hover */
 }
 
 /* ===== Section Layout (Research, Talks, etc.) ===== */
-main {
+main:not(.home-container) {
     flex: 1;
     padding: 2rem;
     max-width: 900px;
@@ -94,24 +95,24 @@ main {
     text-align: left;  /* align all content to left */
 }
 
-main h1 {
+main:not(.home-container) h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center; /* keep big page titles centered */
 }
 
-main h2 {
+main:not(.home-container) h2 {
     font-size: 2rem;
     margin-top: 2rem;
 }
 
-main ul {
+main:not(.home-container) ul {
     list-style: none;
     padding-left: 0;
     margin-left: 0;
 }
 
-main li {
+main:not(.home-container) li {
     margin: 1rem 0;
     font-size: 1.1rem;
     line-height: 1.6;
