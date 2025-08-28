@@ -8,9 +8,9 @@ body, html {
 .home-container {
     display: flex;
     height: 100vh; /* full viewport height */
-    background-color: #ef5350; /* light red */
+    /* background-color: #ef5350;  light red */
     /* background-color: #c62828;  firebrick */
-    /* background-color: #b71c1c;  dark red */ 
+    background-color: #b71c1c; /* dark red */ 
     color: white;
     justify-content: center; /* horizontal centering of left/right blocks */
     align-items: center;     /* vertical centering */
