@@ -5,7 +5,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Full-page background */
+/* Full-page background for homepage */
 .home-container {
     display: flex;
     justify-content: center;   /* center horizontally */
@@ -54,32 +54,70 @@ body, html {
     margin-bottom: 20px;
 }
 
+/* ===== Unified Navigation (works for all pages) ===== */
+header nav a,
+header a,
 .home-right nav a {
     display: inline-block;
-    margin: 5px 10px;
+    margin: 0 15px;
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 1.1rem;
     transition: color 0.3s;
 }
 
+header nav a:hover,
+header a:hover,
 .home-right nav a:hover {
     color: #ffab91; /* peach hover effect */
 }
 
-/* General link style */
-a {
+/* ===== General link style (content links, not nav) ===== */
+main a {
     color: #ffab91;           /* peach color like nav hover */
-    text-decoration: none;    /* remove underline */
+    text-decoration: none;    
     font-weight: bold;
 }
 
-/* Hover effect */
-a:hover {
+main a:hover {
     color: #ffd5c2;           /* lighter peach on hover */
     text-decoration: underline;
 }
 
+/* ===== Section Layout (Research, Talks, etc.) ===== */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;  /* align all content to left */
+}
+
+main h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center; /* keep big page titles centered */
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+main ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+main li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 10px;
