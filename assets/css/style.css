@@ -29,9 +29,11 @@ body, html {
 
 .home-left img.profile {
     max-width: 250px;
-    border-radius: 50%;
+    border-radius: 20px; /* smooth rounded corners */
     margin-bottom: 20px;
+    object-fit: cover; /* keeps the image proportioned */
 }
+
 
 .home-right h1 {
     font-size: 3rem; /* maintain difference in font sizes */
