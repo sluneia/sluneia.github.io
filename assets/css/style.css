@@ -216,7 +216,7 @@ footer {
   /* stack homepage vertically and reverse order */
   main.home-container {
     flex-direction: column-reverse; /* right block on top, left block below */
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
     min-height: auto;
     align-items: center;
