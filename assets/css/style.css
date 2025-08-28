@@ -15,15 +15,12 @@ body, html {
     padding: 40px;
     box-sizing: border-box;
 
-    /* background-color: #ef5350;  light red */
-    /* background-color: #c62828;  firebrick */
-    /*background-color: #b71c1c;   /* dark red */
-    background-color: #a3a8f9; /* soft pastl indigo */
-    color: white;
+    background-color: #a3a8f9; /* pastel indigo */
+    color: #1e1e2f;            /* dark indigo for body text */
 }
 
 .home-left, .home-right {
-    flex: 0 1 400px;           /* columns don’t expand too much */
+    flex: 0 1 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,10 +29,10 @@ body, html {
 
 .home-left img.profile {
     max-width: 250px;
-    border-radius: 20px;           /* smooth rounded corners */
+    border-radius: 20px;   /* smooth rounded corners */
     margin-bottom: 20px;
     object-fit: cover;
-    border: 4px solid white;
+    border: 4px solid #ffffff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
@@ -48,11 +45,13 @@ body, html {
 .home-right h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #2c2c54; /* deeper indigo for headings */
 }
 
 .home-right p {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #1e1e2f; /* readable text */
 }
 
 /* ===== Unified Navigation (all pages) ===== */
@@ -62,7 +61,7 @@ header a,
     display: inline-block;
     margin: 0 15px;
     text-decoration: none;
-    color: white;
+    color: #ffffff;       /* white nav links */
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -71,20 +70,20 @@ header a,
 header nav a:hover,
 header a:hover,
 .home-right nav a:hover {
-    color: #ffab91; /* peach hover effect */
-    text-decoration: none; /* prevent underline on hover */
+    color: #ffd166;       /* pastel yellow hover */
+    text-decoration: none;
 }
 
 /* ===== General content links (non-nav) ===== */
 main a {
-    color: #ffab91;           /* peach color */
-    text-decoration: none;    /* remove underline */
+    color: #3b3bb3;       /* medium indigo-blue links */
+    text-decoration: none;
     font-weight: bold;
 }
 
 main a:hover {
-    color: #ffd5c2;           /* lighter peach on hover */
-    text-decoration: none;     /* no underline on hover */
+    color: #ff7eb9;       /* pastel pink hover */
+    text-decoration: none;
 }
 
 /* ===== Section Layout (Research, Talks, etc.) ===== */
@@ -93,18 +92,20 @@ main:not(.home-container) {
     padding: 2rem;
     max-width: 900px;
     margin: 0 auto;
-    text-align: left;  /* align all content to left */
+    text-align: left;
 }
 
 main:not(.home-container) h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-align: center; /* keep big page titles centered */
+    text-align: center;
+    color: #2c2c54; /* keep consistency */
 }
 
 main:not(.home-container) h2 {
     font-size: 2rem;
     margin-top: 2rem;
+    color: #2c2c54;
 }
 
 main:not(.home-container) ul {
@@ -117,13 +118,14 @@ main:not(.home-container) li {
     margin: 1rem 0;
     font-size: 1.1rem;
     line-height: 1.6;
+    color: #1e1e2f;
 }
 
 /* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 10px;
-    background: #333;
-    color: white;
+    background: #2c2c54;  /* deep indigo footer */
+    color: #ffffff;
     font-size: 0.9rem;
 }
