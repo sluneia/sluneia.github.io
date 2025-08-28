@@ -29,10 +29,19 @@ body, html {
 
 .home-left img.profile {
     max-width: 250px;
-    border-radius: 20px; /* smooth rounded corners */
+    border-radius: 20px;           /* smooth rounded corners */
     margin-bottom: 20px;
-    object-fit: cover; /* keeps the image proportioned */
+    object-fit: cover;             /* keeps proportions */
+    border: 4px solid white;       /* thin white border around the image */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* subtle shadow */
+    transition: transform 0.3s ease; /* optional hover effect */
 }
+
+/* Optional hover effect */
+.home-left img.profile:hover {
+    transform: scale(1.05);        /* slight zoom on hover */
+}
+
 
 
 .home-right h1 {
