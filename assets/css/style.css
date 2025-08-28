@@ -211,13 +211,11 @@ footer {
   flex-shrink: 0;
 }
 
-/* ===========================
-   Responsive tweaks
-   =========================== */
+/* MOBILE LAYOUT */
 @media (max-width: 768px) {
-  /* stack homepage vertically on small screens */
+  /* stack homepage vertically and reverse order */
   main.home-container {
-    flex-direction: column;
+    flex-direction: column-reverse; /* right block on top, left block below */
     gap: 20px;
     padding: 20px;
     min-height: auto;
@@ -245,29 +243,5 @@ footer {
   header a {
     font-size: 1rem;
     margin: 0 10px;
-  }
-
-  body.subpage main {
-    padding: 1.25rem;
-    min-height: auto;
-  }
-}
-
-@media (max-width: 420px) {
-  header {
-    padding: 0.75rem 1rem;
-    gap: 12px;
-  }
-
-  header a {
-    font-size: 0.95rem;
-  }
-
-  .home-right h1 {
-    font-size: 1.6rem;
-  }
-
-  .home-right p {
-    font-size: 1rem;
   }
 }
