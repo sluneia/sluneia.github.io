@@ -199,6 +199,28 @@ body.subpage header a:hover {
   text-decoration: none;
 }
 
+/* About page photo */
+.about-photo {
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    margin: 2rem 0;           /* spacing above and below */
+}
+
+.about-photo img {
+    max-width: 80%;            /* scale down to fit container */
+    border-radius: 20px;       /* same smooth corners as profile */
+    border: 4px solid #ffd166; /* pastel yellow border like link hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-photo img:hover {
+    transform: scale(1.03);    /* subtle zoom on hover */
+}
+
+
+
 /* ===========================
    Footer (global)
    =========================== */
