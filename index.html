@@ -46,18 +46,26 @@
   </div>
 </div>
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+
   const toggle = document.getElementById("contact-toggle");
   const panel = document.getElementById("contact-panel");
   const closeBtn = document.getElementById("close-contact");
 
-  toggle.addEventListener("click", function(event) {
-    event.preventDefault();
-    panel.classList.add("active");
-  });
+  if (toggle) {
+    toggle.addEventListener("click", function(event) {
+      event.preventDefault();
+      panel.classList.add("active");
+    });
+  }
 
-  closeBtn.addEventListener("click", function() {
-    panel.classList.remove("active");
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function() {
+      panel.classList.remove("active");
+    });
+  }
+
+});
 </script>
 </body>
 </html>
