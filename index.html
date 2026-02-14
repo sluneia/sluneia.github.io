@@ -15,6 +15,20 @@
     <button id="close-contact">Close</button>
   </div>
 </div>
+<script>
+  const toggle = document.getElementById("contact-toggle");
+  const panel = document.getElementById("contact-panel");
+  const closeBtn = document.getElementById("close-contact");
+
+  toggle.addEventListener("click", function(event) {
+    event.preventDefault();
+    panel.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", function() {
+    panel.classList.remove("active");
+  });
+</script>
 <body>
     <main class="home-container">
         <div class="home-left">
