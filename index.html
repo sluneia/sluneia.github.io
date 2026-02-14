@@ -7,28 +7,6 @@
   <meta name="description" content="I am a PhD student at the University of Massachusetts Amherst, working under the supervision of Martina Rovelli.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-  <div id="contact-panel">
-  <div class="contact-content">
-    <h2>Contact</h2>
-    <p>Email: sluneia [at] uottawa [dot] ca</p>
-    <p>Office: 569 STEM Complex, University of Ottawa, 150 Louis-Pasteur Private</p>
-    <button id="close-contact">Close</button>
-  </div>
-</div>
-<script>
-  const toggle = document.getElementById("contact-toggle");
-  const panel = document.getElementById("contact-panel");
-  const closeBtn = document.getElementById("close-contact");
-
-  toggle.addEventListener("click", function(event) {
-    event.preventDefault();
-    panel.classList.add("active");
-  });
-
-  closeBtn.addEventListener("click", function() {
-    panel.classList.remove("active");
-  });
-</script>
 <body>
     <main class="home-container">
         <div class="home-left">
@@ -59,5 +37,27 @@
     <footer>
         <p>© 2025 Stefano Luneia</p>
     </footer>
+    <div id="contact-panel">
+  <div class="contact-content">
+    <h2>Contact</h2>
+    <p>Email: sluneia [at] uottawa [dot] ca</p>
+    <p>Office: 569 STEM Complex, University of Ottawa, 150 Louis-Pasteur Private</p>
+    <button id="close-contact">Close</button>
+  </div>
+</div>
+<script>
+  const toggle = document.getElementById("contact-toggle");
+  const panel = document.getElementById("contact-panel");
+  const closeBtn = document.getElementById("close-contact");
+
+  toggle.addEventListener("click", function(event) {
+    event.preventDefault();
+    panel.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", function() {
+    panel.classList.remove("active");
+  });
+</script>
 </body>
 </html>
