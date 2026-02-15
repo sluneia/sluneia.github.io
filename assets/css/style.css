@@ -273,6 +273,9 @@ footer {
     font-size: 1rem;
     margin: 0 10px;
   }
+  #contact-panel {
+  display: none !important;
+  }
 }
 /* Contact side panel */
 #contact-panel {
