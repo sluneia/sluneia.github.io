@@ -273,27 +273,25 @@ footer {
     font-size: 1rem;
     margin: 0 10px;
   }
-  #contact-panel {
-  display: none !important;
-  }
 }
 /* Contact side panel */
 #contact-panel {
   position: fixed;
   top: 0;
-  right: -320px;   
-  width: 280px;    
+  right: 0;
+  width: 280px;
   height: 100%;
   background: #35357a;
   color: white;
   padding: 2rem;
   box-shadow: -4px 0 15px rgba(0,0,0,0.3);
-  transition: right 0.3s ease;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
   z-index: 1000;
 }
 
 #contact-panel.active {
-  right: 0; 
+  transform: translateX(0);
 }
 
 .contact-content h2 {
