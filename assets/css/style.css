@@ -114,6 +114,22 @@ main.home-container {
   text-decoration: none;
 }
 
+.home-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seminar-row {
+    margin: 3px 0;
+}
 /* ===========================
    Subpages (research, talks, about, cv, ...) 
    =========================== */
@@ -269,6 +285,13 @@ footer {
     margin: 0;          /* reset horizontal margin */
   }
 
+  .home-nav {
+    gap: 15px;
+   }
+
+  .nav-row {
+    display: contents;
+  }
   header a {
     font-size: 1rem;
     margin: 0 10px;
