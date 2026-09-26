@@ -235,6 +235,36 @@ body.subpage header a:hover {
     transform: scale(1.03);    /* subtle zoom on hover */
 }
 
+/* Leaning Seminars */
+
+.coorganizer {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #6b665e;
+    margin-left: 0.4rem;
+}
+
+.seminar-entry {
+    margin-bottom: 2.5rem;
+}
+
+.seminar-entry h2 {
+    margin-bottom: 0.6rem;
+}
+
+.seminar-entry h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.lecture-list {
+    padding-left: 1.2rem;
+}
+
+.lecture-list li {
+    margin-bottom: 0.4rem;
+}
+
 
 
 /* ===========================
