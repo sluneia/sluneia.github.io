@@ -235,36 +235,43 @@ body.subpage header a:hover {
     transform: scale(1.03);    /* subtle zoom on hover */
 }
 
-/* Leaning Seminars */
+/* Seminars page */
 
-.coorganizer {
-    font-size: 0.8em;
-    font-weight: 400;
-    color: #6b665e;
-    margin-left: 0.4rem;
+.seminars-page .coorganizer {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e2f;
+  margin: 0.4rem 0 1rem;
 }
 
-.seminar-entry {
-    margin-bottom: 2.5rem;
+.seminars-page .seminar-entry {
+  margin: 1.75rem 0 2.5rem;
 }
 
-.seminar-entry h2 {
-    margin-bottom: 0.6rem;
+.seminars-page .seminar-entry h3 {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: #2c2c54;
+  margin: 0 0 0.4rem;
 }
 
-.seminar-entry h3 {
-    margin-top: 1.2rem;
-    margin-bottom: 0.5rem;
+.seminars-page .semester {
+  font-size: 0.8em;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
-.lecture-list {
-    padding-left: 1.2rem;
+.seminars-page .selected-lectures {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  margin: 1.2rem 0 0.4rem;
 }
 
-.lecture-list li {
-    margin-bottom: 0.4rem;
+.seminars-page .lecture-list {
+  margin-top: 0;
 }
-
 
 
 /* ===========================
